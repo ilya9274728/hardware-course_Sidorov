@@ -1,4 +1,4 @@
-Console.WriteLine("\n[Цвета ConsoleColor]");)
+Console.WriteLine("\n[Цвета ConsoleColor]");
 
 foreach (ConsoleColor color in Enum.GetValues(typeof(ConsoleColor)))
 {
