@@ -1,12 +1,30 @@
-﻿Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("\n[Цвета ConsoleColor]");
+
+foreach (ConsoleColor color in Enum.GetValues(typeof(ConsoleColor)))
+{
+    Console.ForegroundColor = color;
+
+    if (color == ConsoleColor.Black)
+        Console.BackgroundColor = ConsoleColor.Gray;
+
+    Console.WriteLine(color);
+    Console.ResetColor();
+}
+
+Console.ResetColor();
+Console.ForegroundColor = ConsoleColor.Cyan;
 Console.WriteLine("ВИЗИТКА СИСТЕМЫ");
 Console. ResetColor();
 
-string studentName = "Илья"; 
+string studentName = "Сидоров Илья Владиславович"; 
 string studentGroup = "ПМБИ-261"; 
+string favoriteLanguage = "C#";
+int programmingYears = 0;
 Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine("\n[Студент]");
 Console. ResetColor();
+Console.WriteLine($"Любимый язык программирования: {favoriteLanguage}");
+Console.WriteLine($"Программирую лет: {programmingYears}");
 Console.WriteLine($"Имя:    {studentName} ");
 Console.WriteLine($"Группа: {studentGroup}");
 Console.WriteLine($"Дата:   {DateTime. Now:dd.MM.yyyy HH: mm}");
@@ -35,4 +53,5 @@ Console.WriteLine($"Размер указателя: {IntPtr.Size * 8} бит");
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("/пПрограмма выполнена успешно!");
 Console.ResetColor();
+
 
